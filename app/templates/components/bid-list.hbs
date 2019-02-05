@@ -1,0 +1,25 @@
+<table class="striped">
+  <thead>
+    <tr>
+      <th>
+        Namn
+      </th>
+      <th>
+        Bud
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each bids as |bid|}}
+      <tr>
+        <td>
+          {{bid.name}}
+        </td>
+        <td>
+          {{bid.amount}}
+          kr
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,7 +1,8 @@
-# auktion
+# Bid Bird
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Simple single, one item auction site.
+
+Uses Google Cloud Firestore database and deploys to Firebase web hosting.
 
 ## Prerequisites
 
@@ -10,28 +11,19 @@ You will need the following things properly installed on your computer.
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm)
 * [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+* [Google Firestore](https://firebase.google.com/docs/firestore/quickstart)
+* [Firebase CLI](https://firebase.google.com/docs/cli/)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd auktion`
+* `git clone https://github.com/notnotse/bid-bird` this repository
+* `cd bid-bird`
 * `npm install`
 
 ## Running / Development
 
-* `ember serve`
+* `FIREBASE_ID=your-project-id FIREBASE_API_KEY=project-api-key ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
 
 ### Linting
 
@@ -39,19 +31,8 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `npm run lint:js`
 * `npm run lint:js -- --fix`
 
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
 
 ### Deploying
 
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+* `firebase login` 
+* `FIREBASE_ID=your-project-id FIREBASE_API_KEY=project-api-key npm run deploy` 

@@ -1,0 +1,60 @@
+<h4 class="">
+  Nytt bud
+</h4>
+<a
+  class="btn-small waves-effect waves-light right
+    {{if this.validAmount '' 'pulse'}}"
+  {{action 'setMinAmount'}}
+>
+  Minsta bud
+  {{this.minBid}}
+</a>
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div
+        class="input-field col s12 {{if this.validAmount '' 'red lighten-4'}}"
+      >
+        {{input type='number' id='amount' value=this.model.amount}}
+        {{#unless this.model.amount}}
+          <label for="amount">
+            Bud
+          </label>
+        {{/unless}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        {{input type='text' id='name' value=this.name}}
+        {{#unless this.name}}
+          <label for="name">
+            Namn
+          </label>
+        {{/unless}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        {{input type='tel' id='phone' value=this.phone}}
+        {{#unless this.phone}}
+          <label for="phone">
+            Telefon
+          </label>
+        {{/unless}}
+      </div>
+    </div>
+  </form>
+</div>
+<div class="left-align">
+  <a class="btn-large {{if this.isValid '' 'disabled'}}" {{action 'save'}}>
+    {{#if this.saving}}
+      Sparar...
+    {{else}}
+      Lägg bud
+    {{/if}}
+  </a>
+  <a class="btn-large btn-flat" {{action 'cancel'}}>
+    Avbryt
+  </a>
+</div>
+{{outlet}}

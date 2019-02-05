@@ -1,0 +1,10 @@
+{{#image-card url=this.model.imageUrl description=this.model.description}}
+
+{{/image-card}}
+<div class="center-align">
+  {{#link-to "place-bid" class="btn-large"}}
+    Lägg ett bud
+  {{/link-to}}
+</div>
+{{#bid-list bids=this.bids}}{{/bid-list}}
+{{outlet}}

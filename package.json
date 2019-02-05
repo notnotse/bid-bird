@@ -1,5 +1,5 @@
 {
-  "name": "auktion",
+  "name": "bidbird",
   "version": "0.0.0",
   "private": true,
   "description": "Small description for auktion goes here",
@@ -15,13 +15,15 @@
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+		"deploy": "ember build --environment=production && firebase deploy --only hosting"
   },
   "devDependencies": {
     "@ember/jquery": "^0.5.2",
     "@ember/optional-features": "^0.6.3",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.1.0",
+    "ember-auto-import": "1.2.19",
     "ember-cli": "~3.7.1",
     "ember-cli-app-version": "^3.2.0",
     "ember-cli-babel": "^7.1.2",
@@ -43,9 +45,14 @@
     "ember-welcome-page": "^3.2.0",
     "eslint-plugin-ember": "^5.2.0",
     "loader.js": "^4.7.0",
+    "prettier": "1.16.4",
     "qunit-dom": "^0.8.0"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
+  },
+  "dependencies": {
+    "firebase": "5.8.2",
+    "materialize-css": "1.0.0-rc.2"
   }
 }
